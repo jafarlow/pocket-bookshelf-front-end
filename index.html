@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Album Builder</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,47 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Album Builder</h1>
+      <section class="form-group">
+
+        <h4>Login</h4>
+
+        <form class="form-inline">
+
+          <div class="form-group">
+            <label class="sr-only" for="loginEmail">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="loginPassword">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h4>Not registered? Sign-up below!</h4>
+
+        <form class="form-inline">
+
+          <div class="form-group">
+            <label class="sr-only" for="loginEmail">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Register with fake email">
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="registerPassword">Choose Password</label>
+            <input type="password" class="form-control" id="registerPassword" placeholder="Choose password">
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="confirmationPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmationPassword" placeholder="Confirm password">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </section>
     </body>
 </html>
