@@ -26,7 +26,7 @@ const onGetAlbums = function (event) {
 
 // ALL HANDLERS
 const addHandlers = function () {
-  $("#albums-create").on("submit", onCreateAlbum)
+  $("#create-album").on("submit", onCreateAlbum)
   $("#get-albums").on("click", onGetAlbums)
 }
 

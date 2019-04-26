@@ -2,7 +2,7 @@
 
 // CREATE AN ALBUM
 const createAlbumSuccess = function (response) {
-  $("#message").text(`${resonse.album.title} has been added to your collecition`)
+  $("#message").text(`${response.album.title} has been added to your collection`)
   $("#create-album input").val("")
   $("#albums-display").html(`
     <p>${response.album.title} by ${response.album.artist}</p>
@@ -16,7 +16,7 @@ const createAlbumFailure = function () {
 }
 
 const getAlbumsSuccess = function (response) {
-  $("#message").text("")
+  $("#message").text("This is your current collection")
   // clear anything currently shown
   $("#albums-display").html("")
   response.albums.forEach(function (album) {
