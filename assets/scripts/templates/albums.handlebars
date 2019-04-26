@@ -1,0 +1,7 @@
+  {{#each albums as |album|}}
+    <section data-id="{{album.id}}">
+      <p>{{album.title}} by {{album.artist}}</p>
+
+      <button type="button" name="button" class="btn btn-danger delete" data-id="{{album.id}}">Remove</button>
+    </section>
+  {{/each}}

@@ -60,12 +60,12 @@
       <!-- MAIN BUTTONS THAT SHOW ON LOGIN -->
       <section class="main-buttons">
         <button type="button" class="btn btn-primary" id="get-albums">My collection</button>
-        <button type="button" class="btn btn-primary" id="post-album">Add album</button>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapse-me" id="post-album">Add album</button>
       </section>
       <h4 id="message"></h4>
 
       <!-- USER CREATES AN ALBUM SHOWN ONLY WHEN ADD ALBUM IS CLICKED-->
-      <section class="user-input">
+      <section class="user-input collapse" id="collapse-me">
         <form id="create-album">
           <div class="form-group add-album">
             <label class="sr-only" for="album-name">Album Name</label>

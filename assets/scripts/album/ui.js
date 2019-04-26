@@ -1,4 +1,5 @@
 'use strict'
+const albumsTemplate = require("../templates/albums.handlebars")
 
 // CREATE AN ALBUM
 const createAlbumSuccess = function (response) {
@@ -19,11 +20,9 @@ const getAlbumsSuccess = function (response) {
   $("#message").text("This is your current collection")
   // clear anything currently shown
   $("#albums-display").html("")
-  response.albums.forEach(function (album) {
-    $("#albums-display").append(`
-      <p>${response.album.title} by ${response.album.artist}</p>
-      `)
-  })
+  // replace this forEach with handlebars to prevent attack
+  const showAlbumsHtml = albumsTemplate({albums: response.albums})
+  $("#albums-display").append(showAlbumsHtml)
 }
 
 const getAlbumsFailure = function () {
