@@ -11,6 +11,6 @@ const userEvents = require("./album/events.js")
 
 $(() => {
   // your JS code goes here
-  // userAuth.addHandlers()
+  userAuth.addHandlers()
   userEvents.addHandlers()
 })
