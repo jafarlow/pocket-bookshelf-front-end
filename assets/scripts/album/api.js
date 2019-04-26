@@ -2,6 +2,7 @@
 
 // REQURIE LINK
 const config = require("../config.js")
+const store = require("../store")
 
 // CREATE AN ALBUM
 const createAlbum = function (data) {

@@ -56,7 +56,3 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure
 }
-
-module.exports = {
-
-}
