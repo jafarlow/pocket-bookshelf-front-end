@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Album Builder</title>
+      <title>Collection Builder</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,8 +12,10 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Album Builder</h1>
-      <section class="form-group">
+      <h1>Collection Builder</h1>
+
+      <!-- USER LOGIN AND REGISTER SECTION DISPLAYED ONLY ON PAGE LOAD-->
+      <section class="user-auth form-group">
 
         <h4>Login</h4>
 
@@ -37,8 +39,8 @@
         <form class="form-inline">
 
           <div class="form-group">
-            <label class="sr-only" for="loginEmail">Email address</label>
-            <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Register with fake email">
+            <label class="sr-only" for="registerEmail">Email address</label>
+            <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp" placeholder="Register with fake email">
           </div>
 
           <div class="form-group">
@@ -54,5 +56,30 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </section>
+
+      <!-- MAIN BUTTONS THAT SHOW ON LOGIN -->
+      <section class="main-buttons">
+        <button type="button" class="btn btn-primary" id="get-albums">My collection</button>
+        <button type="button" class="btn btn-primary" id="post-album">Add album</button>
+      </section>
+      <h4 id="message"></h4>
+
+      <!-- USER CREATES AN ALBUM SHOWN ONLY WHEN ADD ALBUM IS CLICKED-->
+      <section class="user-input">
+        <form id="create-album">
+          <div class="form-group add-album">
+            <label class="sr-only" for="album-name">Album Name</label>
+            <input type="text" id="album-name" class="form-control add" placeholder="Album Name" name="album[title]" required>
+          </div>
+
+          <div class="form-group add-artist">
+            <label class="sr-only" for="artist-name">Artist Name</label>
+            <input type="text" class="form-control add" id="artist-name" placeholder="Artist Name" name="album[artist]"required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Add to collection</button>
+        </form>
+      </section>
+      <div id="albums-display"></div>
     </body>
 </html>
