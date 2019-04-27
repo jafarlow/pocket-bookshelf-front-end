@@ -3,10 +3,10 @@ const albumsTemplate = require("../templates/albums.handlebars")
 
 // CREATE AN ALBUM
 const createAlbumSuccess = function (response) {
-  $("#message").text(`${response.album.title} has been added to your collection`)
+  $("#message").text(`<i>${response.album.title}</i> has been added to your collection`)
   $("#create-album input").val("")
   $("#albums-display").html(`
-    <p>${response.album.title} by ${response.album.artist}</p>
+    <p><i>${response.album.title}</i> by ${response.album.artist}</p>
     `)
 }
 

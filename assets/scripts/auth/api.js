@@ -13,7 +13,7 @@ const register = function (data) {
   })
 }
 
-//LOGIN
+//SIGNIN
 const signin = function (data) {
   return $.ajax({
     url: config.apiUrl + "/sign-in",
@@ -22,7 +22,7 @@ const signin = function (data) {
   })
 }
 
-//LOGOUT
+//SIGNOUT
 const signout = function () {
   return $.ajax({
     url: config.apiUrl + "/sign-out",

@@ -48,6 +48,8 @@ const onChangePassword = function (event) {
 const addHandlers = function () {
   $("#register").on("submit", onRegister)
   $("#signin").on("submit", onSignin)
+  $("#signout").on("click", onSignout)
+  $("#chg-pwd").on("submit", onChangePassword)
 }
 
 module.exports = {

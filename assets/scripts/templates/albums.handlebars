@@ -1,7 +1,7 @@
   {{#each albums as |album|}}
     <section data-id="{{album.id}}">
-      <p>{{album.title}} by {{album.artist}}</p>
-
-      <button type="button" name="button" class="btn btn-danger delete" data-id="{{album.id}}">Remove</button>
+      <p data-toggle="collapse" data-target="#collapse-list"><i>{{album.title}}</i> by {{album.artist}}</p>
+<!-- CURRENT STATUS: Starts expanded & need to reverse. Need collapse event to only target ONE at a time instead of the entire list -->
+      <button type="button" name="button" class="btn btn-danger delete" data-id="{{album.id}}" class="collapse" id="collapse-list">Remove</button>
     </section>
   {{/each}}

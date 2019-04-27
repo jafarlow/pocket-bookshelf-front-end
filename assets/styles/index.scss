@@ -10,6 +10,14 @@ body {
   padding: 10px 0;
 }
 
-.add {
+section.auth-buttons, section.main-buttons {
+  padding: 10px 0;
+}
+
+.add, .change {
   max-width: 50%;
+}
+
+.auth-buttons, .main-buttons {
+  display: none;
 }

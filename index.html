@@ -57,11 +57,35 @@
         </form>
       </section>
 
+      <!-- USER LOGOUT AND CHANGE PASSWORD DISPLAYED ONLY AFTER LOGGED IN -->
+      <section class="auth-buttons">
+        <button type="button" class="btn btn-primary" id="signout">Sign Out</button>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapse-chg-pwd" id="patch-password">Change Password</button>
+      </section>
+
+      <!-- CHANGE PASSWORD FIELDS THAT SHOW ONLY WHEN BUTTON IS CLICKED -->
+      <section class="user-input collapse" id="collapse-chg-pwd">
+        <form id="chg-pwd" >
+          <div class="form-group change-pwd">
+            <label class="sr-only" for="current-password">Current Password</label>
+            <input type="password" class="form-control change" id="current-password" name="passwords[old]" placeholder="Current Password" required>
+          </div>
+
+          <div class="form-group change-pwd">
+            <label class="sr-only" for="new-password">New Password</label>
+            <input type="password" class="form-control change" id="new-password" name="passwords[new]" placeholder="New Password" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </section>
+
       <!-- MAIN BUTTONS THAT SHOW ON LOGIN -->
       <section class="main-buttons">
         <button type="button" class="btn btn-primary" id="get-albums">My collection</button>
         <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapse-me" id="post-album">Add album</button>
       </section>
+
       <h4 id="message"></h4>
 
       <!-- USER CREATES AN ALBUM SHOWN ONLY WHEN ADD ALBUM IS CLICKED-->

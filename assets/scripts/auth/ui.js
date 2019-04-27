@@ -19,6 +19,9 @@ const signinSuccess = function (data) {
   store.user = data.user
   $("#message").text("Welcome!")
   $("form").trigger("reset")
+  $(".user-auth").hide()
+  $(".auth-buttons").show()
+  $(".main-buttons").show()
 }
 
 const signinFailure = function (data) {
@@ -30,12 +33,14 @@ const signinFailure = function (data) {
 const signoutSuccess = function () {
   $("#message").text("You have signed out")
   store.user = null
+  $(".user-auth").show()
 }
 
 const signoutFailure = function () {
   $("#message").text("Signout has failed")
 }
 
+// CHANGE PASSWORD
 const changePasswordSuccess = function () {
   $("#message").text("Change password success")
   $("form").trigger("reset")
