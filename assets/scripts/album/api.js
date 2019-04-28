@@ -27,7 +27,19 @@ const getAlbums = function () {
   })
 }
 
+// DELETE AN ALBUM
+const deleteAlbum = function (data) {
+  return $.ajax({
+    url: config.apiUrl + "/albums/" + store.albums.id,
+    method: "DELETE",
+    headers: {
+      Authorization: "Token token=" + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createAlbum,
-  getAlbums
+  getAlbums,
+  deleteAlbum
 }

@@ -3,6 +3,7 @@
 // REQUIRE LINKS
 const api = require("./api.js")
 const ui = require("./ui.js")
+const store = require("../store")
 const getFormFields = require("../../../lib/get-form-fields.js")
 
 // CREATE AN ALBUM
@@ -24,10 +25,22 @@ const onGetAlbums = function (event) {
     .catch(ui.getAlbumsFailure)
 }
 
+// DELETE AN ALBUM
+const onDeleteAlbum = function (event) {
+  event.preventDefault()
+
+
+  api.deleteAlbum(store.albums)
+    .then(ui.deleteAlbumSuccess)
+    .catch(ui.deleteAlbumFailure)
+}
+
 // ALL HANDLERS
 const addHandlers = function () {
   $("#create-album").on("submit", onCreateAlbum)
   $("#get-albums").on("click", onGetAlbums)
+  //tried targeting #collapse-list as well with no change in action
+  $("#albums-display").on("click", onDeleteAlbum)
 }
 
 module.exports = {
