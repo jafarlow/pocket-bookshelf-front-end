@@ -40,7 +40,7 @@ const addHandlers = function () {
   $("#create-album").on("submit", onCreateAlbum)
   $("#get-albums").on("click", onGetAlbums)
   //tried targeting #collapse-list as well with no change in action
-  $("#albums-display").on("click", onDeleteAlbum)
+  $("#albums-display").on("click", ".btn-danger", onDeleteAlbum)
 }
 
 module.exports = {
