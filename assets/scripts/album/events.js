@@ -39,10 +39,8 @@ const onDeleteAlbum = function (event) {
 const onUpdateAlbum = function (event) {
   event.preventDefault()
 
-  // $("#modalUpdate").modal("toggle")
   const id = $(event.target).data("id")
   const data = getFormFields(event.target)
-  console.log(data);
   api.updateAlbum(id, data)
     .then(ui.updateAlbumSuccess)
     .catch(ui.updateAlbumFailure)
