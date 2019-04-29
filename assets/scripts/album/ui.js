@@ -35,7 +35,6 @@ const getAlbumsFailure = function () {
 const deleteAlbumSuccess = function (response) {
   $("#message").text("Farewell, album!")
   $("#albums-display").html("")
-  console.log(response);
   const showAlbumsHtml = albumsTemplate({albums: response.albums})
   $("#albums-display").append(showAlbumsHtml)
 }
