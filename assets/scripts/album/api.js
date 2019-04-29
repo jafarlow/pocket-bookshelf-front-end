@@ -38,8 +38,21 @@ const deleteAlbum = function (id) {
   })
 }
 
+// UPDATE AN ALBUM
+const updateAlbum = function (id, data) {
+  return $.ajax({
+    url: config.apiUrl + "/albums/" + id,
+    method: "PATCH",
+    headers: {
+      Authorization: "Token token=" + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   createAlbum,
   getAlbums,
-  deleteAlbum
+  deleteAlbum,
+  updateAlbum
 }

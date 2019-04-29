@@ -1,17 +1,53 @@
 {{#each albums as |album|}}
 
-    <div class="card">
-      <button class="card-header btn" type="button" data-toggle="collapse" data-target="#collapse-list">
-        <i>{{album.title}}</i> by {{album.artist}}
-        <!-- CURRENT STATUS: Need collapse event to only target ONE at a time instead of the entire list -->
-        <!-- If I remove "show" from the div below, the list will not expand when clicked -->
+  <div class="card">
+    <button class="card-header btn" type="button" data-toggle="collapse" data-target="#collapse-buttons-{{album.id}}">
+      <i>{{album.title}}</i> by {{album.artist}}
+      <!-- CURRENT STATUS: Need collapse event to only target ONE at a time instead of the entire list -->
+      <!-- If I remove "show" from the div below, the list will not expand when clicked -->
 
-      </button>
-      <div class="collapse show">
-        <button type="button" name="button" class="card-body btn btn-danger delete py-1 collapse" id="collapse-list" data-id="{{album.id}}">Remove</button>
+    </button>
+    <div class="collapse" id="collapse-buttons-{{album.id}}">
+      <!-- UPDATE BUTTON -->
+      <div class="text-center">
+
+        <a href="" class="card-body btn btn-warning update py-1" data-toggle="modal" data-target=".modal[data-id='{{album.id}}']" data-id="{{album.id}}">Update</a>
+      </div>
+      <!-- DELETE BUTTON -->
+      <div >
+        <button type="button" name="button" class="card-body btn btn-danger delete py-1" data-id="{{album.id}}">Remove</button>
 
       </div>
     </div>
+
+      <div>
+        <!--MODAL CO-OPTED FROM FROM TIC-TAC-TOE-->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-id="{{album.id}}" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h4 class="modal-title">Update</h4>
+                <!--this puts the "x" in the corner-->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <form class="update-item" data-id="{{album.id}}">
+                <input type="text" class="form-control validate" name="album[title]" placeholder="{{album.title}}" required>
+                <input type="text" class="form-control validate" name="album[artist]" placeholder="{{album.artist}}" required>
+                <button class="modal-footer btn btn-warning" type="submit">Confirm</button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
 
 {{/each}}
 

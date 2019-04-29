@@ -41,11 +41,26 @@ const deleteAlbumFailure = function () {
   $("#message").text("Failed to delete the album.")
 }
 
+// UPDATE AN ALBUM
+const updateAlbumSuccess = function (response) {
+  $("#message").text("Album has been updated")
+  $("#albums-display").html("")
+  const showAlbumsHtml = albumsTemplate({albums: response.albums})
+  $("#albums-display").append(showAlbumsHtml)
+  $(".modal-backdrop").remove()
+}
+
+const updateAlbumFailure = function () {
+  $("#message").text("Failed to update the album.")
+}
+
 module.exports = {
   createAlbumSuccess,
   createAlbumFailure,
   getAlbumsSuccess,
   getAlbumsFailure,
   deleteAlbumSuccess,
-  deleteAlbumFailure
+  deleteAlbumFailure,
+  updateAlbumSuccess,
+  updateAlbumFailure
 }

@@ -35,11 +35,25 @@ const onDeleteAlbum = function (event) {
     .catch(ui.deleteAlbumFailure)
 }
 
+// UPDATE AN ALBUM
+const onUpdateAlbum = function (event) {
+  event.preventDefault()
+
+  // $("#modalUpdate").modal("toggle")
+  const id = $(event.target).data("id")
+  const data = getFormFields(event.target)
+  console.log(data);
+  api.updateAlbum(id, data)
+    .then(ui.updateAlbumSuccess)
+    .catch(ui.updateAlbumFailure)
+}
+
 // ALL HANDLERS
 const addHandlers = function () {
   $("#create-album").on("submit", onCreateAlbum)
   $("#get-albums").on("click", onGetAlbums)
   $("#albums-display").on("click", ".btn-danger", onDeleteAlbum)
+  $("#albums-display").on("submit", ".update-item", onUpdateAlbum)
 }
 
 module.exports = {
