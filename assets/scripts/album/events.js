@@ -29,7 +29,7 @@ const onGetAlbums = function (event) {
 const onDeleteAlbum = function (event) {
   event.preventDefault()
 
-  const id = $(".btn-danger").data("id")
+  const id = $(event.target).data("id")
   api.deleteAlbum(id)
     .then(ui.deleteAlbumSuccess)
     .catch(ui.deleteAlbumFailure)
