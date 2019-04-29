@@ -29,8 +29,8 @@ const onGetAlbums = function (event) {
 const onDeleteAlbum = function (event) {
   event.preventDefault()
 
-
-  api.deleteAlbum(store.albums)
+  const id = $(".btn-danger").data("id")
+  api.deleteAlbum(id)
     .then(ui.deleteAlbumSuccess)
     .catch(ui.deleteAlbumFailure)
 }
@@ -39,7 +39,6 @@ const onDeleteAlbum = function (event) {
 const addHandlers = function () {
   $("#create-album").on("submit", onCreateAlbum)
   $("#get-albums").on("click", onGetAlbums)
-  //tried targeting #collapse-list as well with no change in action
   $("#albums-display").on("click", ".btn-danger", onDeleteAlbum)
 }
 

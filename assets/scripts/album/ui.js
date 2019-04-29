@@ -23,8 +23,6 @@ const getAlbumsSuccess = function (response) {
   $("#message").text("This is your current collection")
   // clear anything currently shown
   $("#albums-display").html("")
-  store.albums = response.albums
-  // replace this forEach with handlebars to prevent attack
   const showAlbumsHtml = albumsTemplate({albums: response.albums})
   $("#albums-display").append(showAlbumsHtml)
 }
@@ -34,8 +32,12 @@ const getAlbumsFailure = function () {
 }
 
 // DELETE AN ALBUM
-const deleteAlbumSuccess = function () {
+const deleteAlbumSuccess = function (response) {
   $("#message").text("Farewell, album!")
+  $("#albums-display").html("")
+  console.log(response);
+  const showAlbumsHtml = albumsTemplate({albums: response.albums})
+  $("#albums-display").append(showAlbumsHtml)
 }
 
 const deleteAlbumFailure = function () {

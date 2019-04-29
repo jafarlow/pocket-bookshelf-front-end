@@ -1,6 +1,6 @@
 'use strict'
 
-// REQURIE LINK
+// REQURIE LINKS
 const config = require("../config.js")
 const store = require("../store")
 
@@ -28,9 +28,9 @@ const getAlbums = function () {
 }
 
 // DELETE AN ALBUM
-const deleteAlbum = function (data) {
+const deleteAlbum = function (id) {
   return $.ajax({
-    url: config.apiUrl + "/albums/" + store.albums.id,
+    url: config.apiUrl + "/albums/" + id,
     method: "DELETE",
     headers: {
       Authorization: "Token token=" + store.user.token
