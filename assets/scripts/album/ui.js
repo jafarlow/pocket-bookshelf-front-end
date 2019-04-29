@@ -5,11 +5,9 @@ const store = require("../store")
 
 // CREATE AN ALBUM
 const createAlbumSuccess = function (response) {
-  $("#message").text(`<i>${response.album.title}</i> has been added to your collection`)
+  $("#message").html(`<i>${response.album.title}</i> has been added to your collection`)
   $("#create-album input").val("")
-  $("#albums-display").html(`
-    <p><i>${response.album.title}</i> by ${response.album.artist}</p>
-    `)
+  $("#albums-display").html("")
 }
 
 const createAlbumFailure = function () {
