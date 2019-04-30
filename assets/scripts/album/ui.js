@@ -8,6 +8,7 @@ const createAlbumSuccess = function (response) {
   $("#message").html(`<i>${response.album.title}</i> has been added to your collection`)
   $("#create-album input").val("")
   $("#albums-display").html("")
+  $(".collapse").collapse("hide")
 }
 
 const createAlbumFailure = function () {

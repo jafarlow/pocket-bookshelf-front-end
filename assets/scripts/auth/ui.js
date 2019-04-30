@@ -31,6 +31,7 @@ const signinFailure = function (data) {
 
 //SIGNOUT
 const signoutSuccess = function () {
+  $(".collapse").collapse("hide")
   $("#message").text("You have signed out")
   store.user = null
   $(".user-auth").show()
@@ -47,6 +48,7 @@ const signoutFailure = function () {
 const changePasswordSuccess = function () {
   $("#message").text("Your password has been updated")
   $("form").trigger("reset")
+  $(".collapse").collapse("hide")
 }
 
 const changePasswordFailure = function () {
