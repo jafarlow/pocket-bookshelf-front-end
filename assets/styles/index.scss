@@ -37,8 +37,16 @@ h4 {
     1px 1px 0 #fff;
 }
 
+h5 {
+  font-family: "Paytone One";
+}
+
 .add, .change {
   max-width: 50%;
+}
+
+.add, .album-update {
+  font-family: "Kalam";
 }
 
 .auth-buttons, .main-buttons {
@@ -91,7 +99,7 @@ section.auth-buttons, section.main-buttons {
   font-size: 1.25rem;
 }
 
-.card:hover {
+.card:hover, .modal-header {
   background-color: #591b0a;
   color: #fff;
 }
@@ -104,6 +112,10 @@ section.auth-buttons, section.main-buttons {
   display: inline-flex;
   justify-content: space-around;
   padding: 10px 0;
+}
+
+.delete, .update {
+  font-weight: bold;
 }
 
 .form-group h4 {

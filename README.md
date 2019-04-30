@@ -39,6 +39,8 @@ populate release date and genre fields. I may also try an pull in the album cove
 art and have that displayed somewhere. This information which would be pulled
 from Wikipedia would be displayed in the same collapsed section as the Update and
 Remove buttons.
+On the front end I would like a user to be able to sort their collection
+alphabetically by album title or by album artist.
 
 PLANNING AND DEVELOPMENT PROCESS
 I started out thinking big-picture, and I frequently needed to reel myself in

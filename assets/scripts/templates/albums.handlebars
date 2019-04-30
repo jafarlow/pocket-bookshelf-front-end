@@ -27,7 +27,7 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <h4 class="modal-title">Update</h4>
+              <h5 class="modal-title">Update</h4>
               <!--this puts the "x" in the corner-->
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -35,9 +35,9 @@
             </div>
 
             <form class="update-item" data-id="{{album.id}}">
-              <input type="text" class="form-control validate" name="album[title]" placeholder="{{album.title}}" required>
-              <input type="text" class="form-control validate" name="album[artist]" placeholder="{{album.artist}}" required>
-              <button class="modal-footer btn btn-warning" type="submit">Confirm</button>
+              <input type="text" class="form-control validate album-update" name="album[title]" placeholder="{{album.title}}" required>
+              <input type="text" class="form-control validate album-update" name="album[artist]" placeholder="{{album.artist}}" required>
+              <button class="modal-footer btn btn-warning update" type="submit">Confirm</button>
             </form>
 
           </div>
