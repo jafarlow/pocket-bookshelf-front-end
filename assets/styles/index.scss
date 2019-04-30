@@ -1,9 +1,64 @@
 @import '~bootstrap/scss/bootstrap';
 
+html {
+  height: 100%;
+}
+
 body {
-  width: 800px;
+  width: 1000px;
+  height: 100%;
   text-align: center;
   margin: 0 auto;
+  background-image: linear-gradient(to bottom, #c06f3a, #c88c53, #d0a771, #d9c292, #e5dbb7);
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #000;
+}
+
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #591b0a;
+  border: solid 2px #a85a45;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #591b0a;
+  border-color: #a85a45;
+}
+
+.btn-primary:hover {
+  background-color: #a85a45;
+  border: solid 2px #591b0a;
+}
+
+.banner {
+  background-image: url("../../public/vinyl-records.jpg");
+  height: 200px;
+  background-position: -100px 600px;
+  margin-top: 10px;
+  border: solid 2px #591b0a;
+}
+
+.card:hover {
+  background-color: #591b0a;
+  color: #fff;
+}
+
+.card:hover .card-header {
+  color: #fff;
 }
 
 .form-group h4 {
@@ -20,4 +75,13 @@ section.auth-buttons, section.main-buttons {
 
 .auth-buttons, .main-buttons {
   display: none;
+}
+
+.container {
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.sub-card:hover {
+  background-color: #a85a45;
 }

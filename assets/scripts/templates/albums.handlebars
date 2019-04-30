@@ -5,16 +5,18 @@
       <i>{{album.title}}</i> by {{album.artist}}
     </button>
 
-    <div class="collapse" id="collapse-buttons-{{album.id}}">
-      <!-- UPDATE BUTTON -->
-      <div class="text-center">
+    <div class="collapse sub-card" id="collapse-buttons-{{album.id}}">
+      <div class="container">
 
-        <a href="" class="card-body btn btn-warning update py-1" data-toggle="modal" data-target=".modal[data-id='{{album.id}}']" data-id="{{album.id}}">Update</a>
-      </div>
-      <!-- DELETE BUTTON -->
-      <div >
-        <button type="button" name="button" class="card-body btn btn-danger delete py-1" data-id="{{album.id}}">Remove</button>
+        <!-- UPDATE BUTTON -->
+        <div >
+          <button type="button" class="card-body btn btn-warning update py-1" data-toggle="modal" data-target=".modal[data-id='{{album.id}}']" data-id="{{album.id}}">Update</button>
+        </div>
 
+        <!-- DELETE BUTTON -->
+        <div >
+          <button type="button" name="button" class="card-body btn btn-danger delete py-1" data-id="{{album.id}}">Remove</button>
+        </div>
       </div>
     </div>
 
