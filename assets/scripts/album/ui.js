@@ -18,11 +18,15 @@ const createAlbumFailure = function () {
 
 // GET ALL ALBUMS
 const getAlbumsSuccess = function (response) {
-  $("#message").text("This is your current collection")
-  // clear anything currently shown
-  $("#albums-display").html("")
-  const showAlbumsHtml = albumsTemplate({albums: response.albums})
-  $("#albums-display").append(showAlbumsHtml)
+  if (response.albums.length === 0){
+    $("#message").text("Your collection is currently empty.")
+  } else {
+    $("#message").text("This is your current collection")
+    // clear anything currently shown
+    $("#albums-display").html("")
+    const showAlbumsHtml = albumsTemplate({albums: response.albums})
+    $("#albums-display").append(showAlbumsHtml)
+  }
 }
 
 const getAlbumsFailure = function () {

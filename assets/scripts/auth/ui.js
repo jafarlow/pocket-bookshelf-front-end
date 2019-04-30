@@ -34,6 +34,9 @@ const signoutSuccess = function () {
   $("#message").text("You have signed out")
   store.user = null
   $(".user-auth").show()
+  $(".auth-buttons").hide()
+  $(".main-buttons").hide()
+  $("#albums-display").html("")
 }
 
 const signoutFailure = function () {
@@ -42,7 +45,7 @@ const signoutFailure = function () {
 
 // CHANGE PASSWORD
 const changePasswordSuccess = function () {
-  $("#message").text("Change password success")
+  $("#message").text("Your password has been updated")
   $("form").trigger("reset")
 }
 
